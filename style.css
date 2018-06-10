@@ -1,0 +1,141 @@
+/*
+Theme Name: LaCantonada
+Theme URI: https:quanticbyte.com/lacantonada
+Author: Quanticbyte
+Author URI: https://quanticbyte.com/
+Description: Theme creat per a la cantonada
+Version: 1.0
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+
+/* 
+	light : 300 
+	regular : 400
+	bold:700
+	black : 900
+*/
+/*--------------------------------------------------------------------------------*/
+
+html,body {
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: black;
+}
+
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 0.9em;
+    }
+    .text-titul-portada { font-size: 4em; }
+    .text-subtitol-portada { font-size: 2em; }
+    .index-title { font-size: 4em; }
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 1em;
+    }
+    .text-titul-portada { font-size: 6em; }
+    .text-subtitol-portada { font-size: 3em; }
+    .index-title { font-size: 4em; }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 1.2em;
+    }
+    .text-titul-portada { font-size: 6.5em; }
+    .text-subtitol-portada { font-size: 3em; }
+    .index-title { font-size: 3.5em; }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.3em;
+    }
+    .text-titul-portada { font-size: 9em; }
+    .text-subtitol-portada{ font-size : 4em;  }
+    .index-title { font-size: 4em; }
+}
+/*--------------------------------------------------------------------------------*/
+
+/* Css de la imatge header */
+
+
+.header 
+{
+	background: url("images/portada_2.jpg");
+	background-size: cover;
+	background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.color-menu-q {
+	background-color: rgba(0,0,0,0.7) !important;
+}
+
+.text-titul-portada{
+	font-weight:900;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.text-subtitol-portada{
+	font-weight:300;
+	font-family: 'Source Sans Pro', sans-serif;	
+}
+
+
+/*
+.text-light { font-weight:300; 	 font-size: 60px; }
+.text-regular { font-weight:400; font-size: 60px; }
+.text-bold { font-weight:700; 	 font-size: 60px; }
+.text-black { font-weight:900;   font-size: 60px; }
+*/
+
+.index-title {
+	font-weight:900;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-left: 1em;
+	padding-right: 1em;	
+}
+
+.index-text{
+	font-weight:300;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-left: 2em;
+	padding-right: 2em;		
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.width-100 {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;  
+}
+
+.div-space-q{ height: 2em; }
+
+.text-footer {
+      font-weight: 200;
+}
