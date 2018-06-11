@@ -167,3 +167,12 @@ a .index-title { color:white;  text-decoration: none; }
 a .index-title:hover { color: #c1c1c1; text-decoration: none;  }
 
 .navbar-dark .navbar-nav .nav-link { color:white; }
+
+/* para el color en los campos formulario opciones */
+/* .q_options { 
+{  
+width: 100% !important;
+background-color: #ddd !important;
+}
+
+*/
