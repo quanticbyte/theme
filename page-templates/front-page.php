@@ -33,7 +33,8 @@ Template Name: Pagina d'inici
             <p class="index-text"><?php esc_attr_e($opciones["seccio_1_text"]); ?></p>
           </div>
           <div class="col-md-6 col-12">
-            <img class="card-img-top" src="<?php bloginfo('template_url'); ?>/images/inici_1_1.jpg" alt="imatge_1">
+            <!--img class="card-img-top" src="<?php bloginfo('template_url'); ?>/images/inici_1_1.jpg" alt="imatge_1"-->
+            <img class="card-img-top" src="<?php esc_attr_e($opciones["seccio_1_img"]); ?>" alt="imatge_1">
           </div>
         </div>
 

@@ -127,7 +127,23 @@ add_action( 'admin_menu', 'pa_opciones_theme' );
 	         <img src="$opciones['seccio_1_img']" alt="<?php  esc_attr_e($opciones['seccio_1_titul']); ?>" />
 	    <?php endif; ?>
     </td>
-    </tr>	
+    </tr>
+    <!-- exemple uploader -->
+
+
+			<tr valign="top">
+			    <th scope="row">Subir Imagen</th>
+			    <td>
+			        <label for="upload_image">
+			            <input id="upload_image" type="text" name="upload_image" value="<?php  //esc_attr_e($opciones['seccio_1_img']); ?>" />
+			            <input id="upload_image_button" type="button" value="Subir Imagen" />
+			            <br />Introduce una URL o sube una imagen.
+			        </label>
+			    </td>
+			</tr>
+
+
+    <!-- fi exemple -->	
 	</table>
 </div>
 
@@ -226,4 +242,11 @@ add_action( 'admin_menu', 'pa_opciones_theme' );
  
 <?php
 }
+
+//===============================================================================
+// MEDIA UPLOADER
+//carregem el script nesesari 
+
+
 ?>
+

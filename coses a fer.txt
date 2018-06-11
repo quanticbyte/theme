@@ -1,8 +1,0 @@
--apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-tipus de lletra en body ( per defecte )
-
-'Source Sans Pro', sans-serif
-tipus lletra tituls
-
-Comentaris en pagina de comentaris ( nomes una pagina )
-
