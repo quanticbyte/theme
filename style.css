@@ -157,3 +157,13 @@ html,body {
   margin-left: 0px;
   margin-right: 0px;
 }
+
+.img_article{
+  margin: auto;
+
+}
+
+a .index-title { color:white;  text-decoration: none; }
+a .index-title:hover { color: #c1c1c1; text-decoration: none;  }
+
+.navbar-dark .navbar-nav .nav-link { color:white; }

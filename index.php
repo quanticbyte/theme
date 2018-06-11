@@ -65,18 +65,18 @@
 ?>
 
         <div class="row mt-5 mx-2">
-          <div class="col-12 col-md-6 ">
+          <div class="col-12 col-md-6">
             <!-- <img class="img-top img-fluid" src="images/inici_1_1.jpg" alt="imatge_1"> -->
             <a href="<?php the_permalink(); ?>">
               <?php
                   if ( has_post_thumbnail() ) {
-                  the_post_thumbnail( 'post-thumbnails', array( 'class' => 'img-top img-fluid' ) );
+                  the_post_thumbnail( 'post-thumbnails', array( 'class' => 'img-top img-fluid ' ) );
                   }
               ?>
             </a>
           </div>
 
-          <div class="col-12 col-md-6 text-white d-flex flex-column justify-content-center align-items-center">
+          <div class="col-12 col-md-6 text-white d-flex flex-column justify-content-center align-items-center px-4">
             <a href="<?php the_permalink(); ?>"><h4 class="index-title"><?php the_title(); ?></h4></a>
             <p class="text-footer"><?php echo get_the_date(); ?> / <?php the_category(', '); ?> / <?php the_author(); ?></p>
             <p class="index-text"><?php the_excerpt(); ?></p>
