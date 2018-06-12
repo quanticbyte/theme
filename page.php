@@ -11,6 +11,7 @@
 
 
        <h4 class="index-title margin-top-q"><?php the_title(); ?></h4>
+
       <div class="text-justify">
         <p>
           <?php the_content(); ?>

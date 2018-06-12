@@ -58,10 +58,16 @@
           <?php
                   if ( has_post_thumbnail() ) 
                   {
-                    the_post_thumbnail( 'post-thumbnails', array( 'class' => 'img-fluid img_article ' ) );
+                    //afegits parametres en imatge SEO
+                    the_post_thumbnail( 'post-thumbnails', array( 
+                                                                  'class' => 'img-fluid img_article ',
+                                                                  'alt' => get_the_title(),
+                                                                  'title' => get_the_title() 
+                                                                ) );
                   }
           ?>
 
+      <div class="my-4"></div>
        <h4 class="index-title margin-top-q"><?php the_title(); ?></h4>
        <div class="mx-4"><p class="lead ml-4 mb-4"><?php echo get_the_date(); ?></p></div>
       <div class="text-justify">
