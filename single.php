@@ -58,10 +58,16 @@
           <?php
                   if ( has_post_thumbnail() ) 
                   {
-                    the_post_thumbnail( 'post-thumbnails', array( 'class' => 'img-fluid img_article ' ) );
+                    //afegits parametres en imatge SEO
+                    the_post_thumbnail( 'post-thumbnails', array( 
+                                                                  'class' => 'img-fluid img_article ',
+                                                                  'alt' => get_the_title(),
+                                                                  'title' => get_the_title() 
+                                                                ) );
                   }
           ?>
 
+      <div class="my-4"></div>
        <h4 class="index-title margin-top-q"><?php the_title(); ?></h4>
        <div class="mx-4"><p class="lead ml-4 mb-4"><?php echo get_the_date(); ?></p></div>
       <div class="text-justify">
@@ -69,6 +75,41 @@
           <?php the_content(); ?>
         </p>
       </div>
+
+<?php
+//comentaris
+// formulari de comentaris
+// acompanyat de pagina comments.php
+//---------------------------------------------------------------------------------------
+//simple comment loop
+//Get only the approved comments 
+/*
+$args = array(
+    'status' => 'approve'
+);
+ 
+// The comment Query
+$comments_query = new WP_Comment_Query;
+$comments = $comments_query->query( $args );
+ 
+// Comment Loop
+if ( $comments ) {
+    foreach ( $comments as $comment ) {
+        echo '<p>' . $comment->comment_content . '</p>';
+    }
+} else {
+    echo 'No comments found.';
+}
+*/
+//comments template
+// If comments are open or we have at least one comment, load up the comment template.
+ if ( comments_open() || get_comments_number() ) :
+     comments_template();
+ endif;
+
+//---------------------------------------------------------------------------------------
+?>
+
 
 <?php
     endwhile; endif;

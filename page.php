@@ -11,6 +11,7 @@
 
 
        <h4 class="index-title margin-top-q"><?php the_title(); ?></h4>
+
       <div class="text-justify">
         <p>
           <?php the_content(); ?>
@@ -20,6 +21,17 @@
 <?php
     endwhile; endif;
 ?>
+
+<!-- comentaris -->
+<?php
+// If comments are open or we have at least one comment, load up the comment template.
+ if ( comments_open() || get_comments_number() ) :
+     comments_template();
+ endif;
+
+?>
+<!-- end comentaris -->
+
 
 
     </div>
