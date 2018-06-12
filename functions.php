@@ -38,7 +38,7 @@ $valores_default= array(
 
 //creamos nuestro menu de configuración
 function pa_opciones_theme() {
-    add_theme_page( 'Opciones Theme', 'Opciones Theme', 'edit_theme_options', 'opciones_theme', 'pa_theme_page' );
+    add_theme_page( 'Opciones Theme', 'Opcions La Cantonada', 'edit_theme_options', 'opciones_theme', 'pa_theme_page' );
 }
  
 add_action( 'admin_menu', 'pa_opciones_theme' );
@@ -98,12 +98,22 @@ add_action( 'admin_menu', 'pa_opciones_theme' );
     </td>
     </tr>
  
+
+
+
 <!-- 
     <tr valign="top"><th scope="row"><label for="copyright">Footer Copyright</label></th>
     <td>
     <input id="footer_copyright" name="pa_opciones[copyright]" type="text" value="<?php  esc_attr_e($opciones['copyright']); ?>" />
     </td>
 -->
+ 
+
+
+
+	
+	
+
 	</table>
 <!-- .............................................................................................................. -->
 <!-- SECCIO 1 -->
@@ -119,30 +129,28 @@ add_action( 'admin_menu', 'pa_opciones_theme' );
 	    	<textarea id="seccio_1_text" class="q-options" style="width: 100%; background-color: #ddd; height: 150px;" name="pa_opciones[seccio_1_text]"><?php  esc_attr_e($opciones['seccio_1_text']); ?> </textarea>
 	    </td>
 	</tr>
-    <tr valign="top"><th scope="row"><label for="favico">Seccio 1 IMG</label></th>
-    <td>
-    <input id="seccio_1_img" name="pa_opciones[seccio_1_img]" type="text" value="<?php  esc_attr_e($opciones['seccio_1_img']); ?>" />
-
-	    <?php if($opciones['seccio_1_img'] !='') : ?> 
-	         <img src="$opciones['seccio_1_img']" alt="<?php  esc_attr_e($opciones['seccio_1_titul']); ?>" />
-	    <?php endif; ?>
-    </td>
-    </tr>
     <!-- exemple uploader -->
-
-
 			<tr valign="top">
-			    <th scope="row">Subir Imagen</th>
+			    <th scope="row">Pujar imatge</th>
 			    <td>
 			        <label for="upload_image">
-			            <input id="upload_image" type="text" name="upload_image" value="<?php  //esc_attr_e($opciones['seccio_1_img']); ?>" />
-			            <input id="upload_image_button" type="button" value="Subir Imagen" />
-			            <br />Introduce una URL o sube una imagen.
+			            <input id="upload_image_1" type="text" size="36" name="pa_opciones[seccio_1_img]" value="<?php  esc_attr_e($opciones['seccio_1_img']); ?>" />
+			            <input id="upload_image_button" class="button" type="button" value="Pujar Imatge" onclick="upload(event,'#upload_image_1','#img_1');" />
+			            <br />Introdueix url o puja imtge.
 			        </label>
 			    </td>
 			</tr>
+			<tr>
+				<th></th>
+				<td>
+			    	<div id="img_1"> 
+					    <?php if($opciones['seccio_1_img'] !='') : ?>
+					         <img src="<?php  esc_attr_e($opciones['seccio_1_img']); ?>" alt="<?php  esc_attr_e($opciones['seccio_1_titul']); ?>" width="200" />
+					    <?php endif; ?>
+					</div>
+				</td>
 
-
+			</tr>
     <!-- fi exemple -->	
 	</table>
 </div>
@@ -160,15 +168,28 @@ add_action( 'admin_menu', 'pa_opciones_theme' );
 	    	<textarea id="seccio_2_text" class="q-options" style="width: 100%; background-color: #ddd; height: 150px;" name="pa_opciones[seccio_2_text]"><?php  esc_attr_e($opciones['seccio_2_text']); ?> </textarea>
 	    </td>
 	</tr>
-    <tr valign="top"><th scope="row"><label for="favico">Seccio 2 IMG</label></th>
-    <td>
-    <input id="seccio_2_img" name="pa_opciones[seccio_2_img]" type="text" value="<?php  esc_attr_e($opciones['seccio_2_img']); ?>" />
 
-	    <?php if($opciones['seccio_2_img'] !='') : ?> 
-	         <img src="$opciones['seccio_2_img']" alt="<?php  esc_attr_e($opciones['seccio_2_titul']); ?>" />
-	    <?php endif; ?>
-    </td>
-    </tr>	
+			<tr valign="top">
+			    <th scope="row">Pujar imatge</th>
+			    <td>
+			        <label for="upload_image">
+			            <input id="upload_image_2" type="text" size="36" name="pa_opciones[seccio_2_img]" value="<?php  esc_attr_e($opciones['seccio_2_img']); ?>" />
+			            <input id="upload_image_button" class="button" type="button" value="Pujar Imatge" onclick="upload(event,'#upload_image_2','#img_2');" />
+			            <br />Introdueix url o puja imtge.
+			        </label>
+			    </td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+			         <div id="img_2">
+					    <?php if($opciones['seccio_2_img'] !='') : ?> 
+					         <img src="<?php  esc_attr_e($opciones['seccio_2_img']); ?>" alt="<?php  esc_attr_e($opciones['seccio_2_titul']); ?>" width="200" />
+					    <?php endif; ?>
+			    	 </div>
+				</td>
+
+			</tr>	
 	</table>
 </div>
 
@@ -185,15 +206,29 @@ add_action( 'admin_menu', 'pa_opciones_theme' );
 	    	<textarea id="seccio_3_text" class="q-options" style="width: 100%; background-color: #ddd; height: 150px;" name="pa_opciones[seccio_3_text]"><?php  esc_attr_e($opciones['seccio_3_text']); ?> </textarea>
 	    </td>
 	</tr>
-    <tr valign="top"><th scope="row"><label for="favico">Seccio 2 IMG</label></th>
-    <td>
-    <input id="seccio_3_img" name="pa_opciones[seccio_3_img]" type="text" value="<?php  esc_attr_e($opciones['seccio_3_img']); ?>" />
 
-	    <?php if($opciones['seccio_3_img'] !='') : ?> 
-	         <img src="$opciones['seccio_3_img']" alt="<?php  esc_attr_e($opciones['seccio_3_titul']); ?>" />
-	    <?php endif; ?>
-    </td>
-    </tr>	
+			<tr valign="top">
+			    <th scope="row">Pujar imatge</th>
+			    <td>
+			        <label for="upload_image">
+			            <input id="upload_image_3" type="text" size="36" name="pa_opciones[seccio_3_img]" value="<?php  esc_attr_e($opciones['seccio_3_img']); ?>" />
+			            <input id="upload_image_button" class="button" type="button" value="Pujar Imatge" onclick="upload(event,'#upload_image_3','#img_3');" />
+			            <br />Introdueix url o puja imtge.
+			        </label>
+			    </td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<div id="img_3">
+					    <?php if($opciones['seccio_3_img'] !='') : ?> 
+					         <div id="img_3">
+					         <img src="<?php  esc_attr_e($opciones['seccio_3_img']); ?>" alt="<?php  esc_attr_e($opciones['seccio_3_titul']); ?>" width="200" />
+					    <?php endif; ?>
+					</div>
+				</td>
+
+			</tr>
 	</table>
 </div>
 
@@ -210,15 +245,28 @@ add_action( 'admin_menu', 'pa_opciones_theme' );
 	    	<textarea id="seccio_4_text" class="q-options" style="width: 100%; background-color: #ddd; height: 150px;" name="pa_opciones[seccio_4_text]"><?php  esc_attr_e($opciones['seccio_4_text']); ?> </textarea>
 	    </td>
 	</tr>
-    <tr valign="top"><th scope="row"><label for="favico">Seccio 2 IMG</label></th>
-    <td>
-    <input id="seccio_4_img" name="pa_opciones[seccio_4_img]" type="text" value="<?php  esc_attr_e($opciones['seccio_4_img']); ?>" />
 
-	    <?php if($opciones['seccio_4_img'] !='') : ?> 
-	         <img src="$opciones['seccio_4_img']" alt="<?php  esc_attr_e($opciones['seccio_4_titul']); ?>" />
-	    <?php endif; ?>
-    </td>
-    </tr>	
+			<tr valign="top">
+			    <th scope="row">Pujar imatge</th>
+			    <td>
+			        <label for="upload_image">
+			            <input id="upload_image_4" type="text" size="36" name="pa_opciones[seccio_4_img]" value="<?php  esc_attr_e($opciones['seccio_4_img']); ?>" />
+			            <input id="upload_image_button" class="button" type="button" value="Pujar Imatge" onclick="upload(event,'#upload_image_4','#img_4');" />
+			            <br />Introdueix url o puja imtge.
+			        </label>
+			    </td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<div id="img_4">
+					    <?php if($opciones['seccio_4_img'] !='') : ?> 
+					         <img src="<?php  esc_attr_e($opciones['seccio_4_img']); ?>" alt="<?php  esc_attr_e($opciones['seccio_4_titul']); ?>" width="200" />
+					    <?php endif; ?>
+			    	</div>
+				</td>
+
+			</tr>	
 	</table>
 </div>
 
@@ -246,7 +294,15 @@ add_action( 'admin_menu', 'pa_opciones_theme' );
 //===============================================================================
 // MEDIA UPLOADER
 //carregem el script nesesari 
+add_action('admin_enqueue_scripts', 'upload_script');
 
+function upload_script(){
+  wp_enqueue_media ();
+  // Esto para cargarlo desde la carpeta js de nuestro plugin, si lo tenemos alojado el otro sitio cambiar url
+  //wp_enqueue_script( 'uploader',plugins_url( '/js/wp_uploader.js', __FILE__ ));
+  wp_enqueue_script('uploader',content_url()."/themes/cantonada/js/wp_uploader.js");
+  //var_dump(plugins_url( '/js/wp_uploader.js', __FILE__ ));
+}
 
 ?>
 
