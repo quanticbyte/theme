@@ -176,3 +176,12 @@ background-color: #ddd !important;
 }
 
 */
+
+/*avatar dels comentaris*/
+.avatar_round { border-radius: 50%; }
+.comentari-box { 
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 1px solid #6E6E6E;
+ }
